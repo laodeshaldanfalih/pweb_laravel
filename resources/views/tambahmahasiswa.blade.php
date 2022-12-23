@@ -4,7 +4,7 @@
     @endsection
 
     @section('isinya')
-        <a href="/pegawai"> Kembali</a>
+        <a href="/mahasiswa"> Kembali</a>
 
         <br />
         <br />
@@ -21,7 +21,7 @@
             <input type="submit" value="Simpan Data">
         </form> --}}
 
-        <form action="/pegawai/store" method="post">
+        <form action="/mahasiswa/store" method="post">
             {{ csrf_field() }}
             {{-- <div class="form-group row">
                 <label for="inputNama3" class="col-sm-2 col-form-label">Nama</label>
@@ -61,32 +61,29 @@
             <form action="/pegawai/store" method="post">
                 {{ csrf_field() }}
                 <div class="form-group row">
-                    <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+                    <label for="id" class="col-sm-2 col-form-label">ID</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="namaa" name="nama" placeholder="Nama"
-                            required="required">
+                        <textarea class="form-control" id="id" name="id" rows="3" required="required"></textarea>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>
+                    <label for="normorinduksiswa" class="col-sm-2 col-form-label">NRP</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="Jabatan"
-                            required="required">
+                        <textarea class="form-control" id="normorinduksiswa" name="normorinduksiswa" rows="3" required="required"></textarea>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="umur" class="col-sm-2 col-form-label">Umur</label>
+                    <label for="nilaiangkaa" class="col-sm-2 col-form-label">Nilai Angka</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="umur" name="umur" placeholder="Umur"
-                            required="required">
+                        <textarea class="form-control" id="nilaiangkaa" name="nilaiangkaa" rows="3" required="required"></textarea>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
+                    <label for="sks" class="col-sm-2 col-form-label">SKS</label>
                     <div class="col-sm-10">
-                        <textarea class="form-control" id="alamat" name="alamat" rows="3" required="required"></textarea>
+                        <textarea class="form-control" id="sks" name="sks" rows="3" required="required"></textarea>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Simpan Data</button>
+                <button type="submit" class="btn btn-primary"> SIMPAN</button>
             </form>
         @endsection

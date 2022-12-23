@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 // use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\MahasiswaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,17 +28,7 @@ Route::get('blog', function () {
 	return view('blog');
 });
 
-Route::controller(PegawaiDBController::class)->group(function () {
-    // Route::get('/dosen', 'App\Http\Controllers\DosenController@index');
-    // Route::get('/pegawai/{name}', 'App\Http\Controllers\PegawaiController@index');
-
-    // Route::get('/formulir', 'App\Http\Controllers\PegawaiController@formulir');
-    // Route::post('/formulir/proses', 'App\Http\Controllers\PegawaiController@proses');
-
-    // // route blog
-    // Route::get('/blog', 'App\Http\Controllers\BlogController@home');
-    // Route::get('/blog/tentang', 'App\Http\Controllers\BlogController@tentang');
-    // Route::get('/blog/kontak', 'App\Http\Controllers\BlogController@kontak');
+Route::controller(PegawaiController::class)->group(function () {
 
     //route CRUD
     Route::get('/pegawai','App\Http\Controllers\PegawaiController@index');
@@ -50,6 +41,16 @@ Route::controller(PegawaiDBController::class)->group(function () {
 
     // view
     Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
+});
+
+Route::controller(MahasiswaController::class)->group(function () {
+
+    //route CRUD
+    Route::get('/mahasiswa','App\Http\Controllers\MahasiswaController@index');
+    Route::get('/mahasiswa/tambah','App\Http\Controllers\MahasiswaController@tambah');
+    Route::post('/mahasiswa/store','App\Http\Controllers\MahasiswaController@store');
+    // view
+    Route::get('/mahasiswa/view/{id}','App\Http\Controllers\MahasiswaController@view');
 });
 
 

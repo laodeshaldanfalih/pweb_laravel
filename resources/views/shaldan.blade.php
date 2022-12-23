@@ -21,7 +21,7 @@
     <div class="container mt-5">
 
         <h2 class="text-center">5026211178_Laode Shaldan Falih</h2>
-        <h3 class="text-center">Data Pegawai</h3>
+        <h3 class="text-center">Data Mahasiswa</h3>
 
         {{-- <a href="/pegawai/tambah">+ Tambah Pegawai Baru</a> --}}
         @yield('atas')
